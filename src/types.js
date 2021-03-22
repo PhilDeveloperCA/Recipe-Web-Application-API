@@ -46,5 +46,6 @@ const EntryType = new GraphQLObjectType({
 
 module.exports = {
     UserType,
-    RecipeType
+    RecipeType,
+    EntryType
 }

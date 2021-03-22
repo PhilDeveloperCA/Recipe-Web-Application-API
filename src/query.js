@@ -1,6 +1,6 @@
 const {GraphQLID, GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLList} = require('graphql');
-const {UserType, RecipeType} = require('./types');
-const {User, Recipe} = require('./models/DatabaseTypes');
+const {UserType, RecipeType, EntryType} = require('./types');
+const {User, Recipe, Entries} = require('./models/DatabaseTypes');
 
 const RootQuery = new GraphQLObjectType({
     name : 'Root',
@@ -22,7 +22,7 @@ const RootQuery = new GraphQLObjectType({
             async resolve(parent,args){
                 return Recipe.getById(args.id);
             }
-        }
+        },
     })
 })
 

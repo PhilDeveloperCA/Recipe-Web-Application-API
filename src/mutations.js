@@ -1,5 +1,5 @@
-const {UserType, RecipeType} = require('./types');
-const {User,Recipe} = require('./models/DatabaseTypes');
+const {UserType, RecipeType, EntryType} = require('./types');
+const {User,Recipe, entries} = require('./models/DatabaseTypes');
 const {GraphQLID, GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLList} = require('graphql');
 
 const Mutations = new GraphQLObjectType({
