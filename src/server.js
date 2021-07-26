@@ -18,7 +18,7 @@ var corsOptions = {
 
 const schema = new graphql.GraphQLSchema({
     query: RootQuery,
-    mutation: Mutations
+    mutation: Mutations,
 })
 
 app.use(cors(corsOptions));

@@ -13,7 +13,7 @@ const UserType = new GraphQLObjectType({
                 return Recipe.getByUserId(parent.id);
             }
         },
-        numberLiked : {type:GraphQLInt, 
+        recipesLiked : {type:GraphQLInt, 
             async resolve(parent,args){
                 return User.getNumberLiked(parent.id);
             }

@@ -28,5 +28,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  
+  return knex.schema.dropTable('ingredients').dropTable('entires').dropTable('recipes').dropTable('users');
 };

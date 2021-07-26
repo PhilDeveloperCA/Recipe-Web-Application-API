@@ -40,5 +40,5 @@ module.exports = {
     getNumberLiked : async(id) => {
         var liked = await db.raw('SELECT COUNT(*) FROM likes WHERE user_id = ?', [id]);
         return liked[0];
-    }
+    },
 }

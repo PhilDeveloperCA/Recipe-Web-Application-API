@@ -10,5 +10,13 @@ module.exports = {
     },
     getById : async(recipe_id) => {
         return await db('recipes').where('id', id);
-    }
+    },
+    searchByName : async(name) => {
+        return knex('recipes').whereRaw
+    },
+    searchByTags : async (list_tags) => {
+        knex.raw(`
+        SELECT recipe_id FROM recipe_tags WHERE 
+        `)
+    },
 }

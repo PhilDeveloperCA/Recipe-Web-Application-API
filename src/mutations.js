@@ -27,7 +27,15 @@ const Mutations = new GraphQLObjectType({
            async resolve(parent,args){
                 const recipe = await Recipe.createRecipe(args.user_id, args.title, args.description);
             }
-        }
+        },
+        addEntries : {
+            type: EntryType,
+            args : {
+                recipe_id : {type: GraphQLID},
+                description : {type:GraphQLString}
+            }
+        },
+        
     })
 })
 
